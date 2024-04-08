@@ -29,11 +29,11 @@ export const updateChallenge = async (req, res) => {
         })
         res.json(challenge)
     } catch(e){
+        console.log(e)
         return res.status(404).json({
             "message": "Challenge not updated!",
             "status": 404
         })
-        console.log(e)
     }
 }
 
@@ -42,10 +42,10 @@ export const deleteChallenge = async (req, res) => {
         const challenge = await Challenge.findByIdAndDelete(req.params.id, req.body)
         res.json(challenge)
     } catch(e){
+        console.log(e)
         return res.status(404).json({
             "message": "Challenge not deleted!",
             "status": 404
         })
-        console.log(e)
     }
 }

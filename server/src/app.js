@@ -29,7 +29,7 @@ app.options("*", cors())
 
 
 app.use('/api/challenges', challengeRoutes)
-app.use('/api/challenges/', taskRoutes)
+app.use('/api/challenges', taskRoutes)
 
 
 export default app

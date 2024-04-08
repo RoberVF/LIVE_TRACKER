@@ -1,17 +1,16 @@
 import mongoose from 'mongoose'
 
 const taskSchema = new mongoose.Schema({
-    challengeId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Challenge",
-        required: true
+    challenge: {
+        type: String,
+        required: true,
     },
     completed: {
         type: Boolean,
         required: true
     },
     date: {
-        type: Date,
+        type: String,
         required: true
     },
     info: {
