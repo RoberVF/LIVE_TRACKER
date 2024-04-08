@@ -5,12 +5,12 @@ import { createChallenge, deleteChallenge, getAllChallenges, updateChallenge } f
 
 const route = Router()
 
-route.get("/challenges/", getAllChallenges)
+route.get("/", getAllChallenges)
 
-route.post("/challenges/createChallenge", createChallenge)
+route.post("/createChallenge", createChallenge)
 
-route.put("/challenges/:id", updateChallenge)
+route.put("/:id", updateChallenge)
 
-route.delete("/challenges/:id", deleteChallenge)
+route.delete("/:id", deleteChallenge)
 
 export default route

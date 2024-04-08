@@ -2,7 +2,8 @@ import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 
-import mainRoutes from './routes/main.routes.js'
+import challengeRoutes from './routes/challenge.routes.js'
+import taskRoutes from './routes/task.routes.js'
 
 import {FRONTEND_URL} from './config.js'
 
@@ -27,6 +28,8 @@ app.use(cors(corsOptions))
 app.options("*", cors())
 
 
-app.use('/api', mainRoutes)
+app.use('/api/challenges', challengeRoutes)
+app.use('/api/challenges/', taskRoutes)
+
 
 export default app
